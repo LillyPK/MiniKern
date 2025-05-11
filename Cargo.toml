@@ -1,0 +1,11 @@
+[package]
+name = "minikern"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+sha2 = "0.10"
+hex = "0.4" # For converting hash to string
+quick-xml = { version = "0.31", features = ["serialize", "async-tokio"] } # async-tokio not strictly needed here but good practice
+rpassword = "7.3"
+# No need for lazy_static or once_cell with this approach
